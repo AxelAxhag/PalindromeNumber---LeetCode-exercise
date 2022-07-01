@@ -1,0 +1,15 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        
+        y = str(x)
+        ststr = ""
+        for i in range(int(len(y)/2)): 
+            ststr += str(y[i])
+
+        ndstr = ""
+        for i in range(int(len(y)/2)):
+            ndstr += y[len(y) - 1 - i]
+        if ststr == ndstr:
+            return(True)
+        else:
+            return(False)
